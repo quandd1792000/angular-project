@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  font-family :'Lexend', sans-serif;
+
+}
+html{
+  width: 1920px;
+}
+
+@media screen and (max-width: 1300px) {
+  html{
+    width: 75%;
+  }
+
+}

@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="left-column">
+    <h1></h1>
+  </div>
+  <div class="news-container">
+    <h1 style="color: #08BFBF;">TIN TỨC </h1>
+    <div class="news-posts-container">
+      <div *ngFor="let item of visiblePostNews" class="news">
+        <div class="image-news">
+          <img class="image" [src]="item.url" alt="Image">
+        </div>
+        <div class="date-post">{{item.date}} </div>
+        <div class="title-post">{{item.title}} </div>
+        <div class="detail-post">{{item.detail}} </div>
+        <a class="go-detail" href="">xem thêm ></a>
+      </div>
+    </div>
+    <div *ngIf="isWindowWidthLessThan768" class="news-posts-new-container">
+
+      <div *ngFor="let item of visiblePostNewsResponsive" class="news">
+        <div class="image-news">
+          <button class="button-left-image" (click)="prev()">&lt;</button>
+          <img class="image" [src]="item.url" alt="Image">
+          <button class="button-right-image" (click)="next()">&gt;</button>
+        </div>
+        <div class="date-post">{{item.date}} </div>
+        <div class="title-post">{{item.title}} </div>
+        <div class="detail-post">{{item.detail}} </div>
+        <a class="go-detail" href="">xem thêm ></a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="right-column">
+    <h1></h1>
+  </div>
+</div>

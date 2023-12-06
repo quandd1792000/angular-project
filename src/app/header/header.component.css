@@ -1,0 +1,289 @@
+.container {
+  display: flex;
+  justify-content: center;
+  /* Căn giữa các cột */
+  align-content: center;
+  margin-bottom: 10px;
+
+}
+
+.div-header {
+  margin-top: 20px;
+  width: 1110px;
+  display: flex;
+  text-align: center;
+}
+
+.left-column,
+.right-column {
+  width: 405px;
+  /* Độ rộng của mỗi cột (50% cho mỗi cột) */
+  box-sizing: border-box;
+
+}
+
+image {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.logo-container {
+  justify-content: left;
+  display: grid;
+  width: 95px;
+}
+
+.image {
+  width: 35px;
+  height: auto;
+}
+
+.image-title {
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: -2px;
+}
+
+.image-title2 {
+  font-weight: bold;
+  color: cyan;
+  font-size: 20.5px;
+  margin-top: -8px;
+}
+
+div {
+  display: flex;
+}
+
+
+.input-with-icon {
+  position: relative;
+  display: inline-block;
+}
+
+.input-field {
+  padding-left: 30px;
+}
+
+.icon {
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+
+.search-input {
+  width: 315px;
+  height: 29px;
+  margin-top: 20px;
+
+}
+
+.search-icon {
+  width: 35px;
+  height: 35px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+  background-image: url('src/assets/image/searchIcon.png');
+  background-size: cover;
+  background-position: center;
+  color: transparent;
+}
+
+.search-container {
+  margin-top: 10px;
+  width: 480px;
+  justify-content: center;
+  display: flex;
+}
+
+.longin-container {
+
+  justify-content: right;
+  margin-top: 10px;
+  width: 315px;
+}
+
+.link-account-container,
+.link-cart-container {
+  display:grid;
+  text-align: left;
+  margin-top: 16px;
+
+}
+
+.link-login,
+.link-totalprice {
+  text-decoration: none;
+  color: inherit;
+  margin-top: -30px;
+}
+
+.login-icon,
+.cart-icon {
+  width: 35px;
+  height: 35px;
+  margin-top: 15px;
+}
+
+.link-account,
+.link-cart {
+  text-decoration: none;
+  font-weight: bold;
+  color: inherit;
+  text-align: left;
+}
+
+.cart-container {
+  justify-content: right;
+  margin-top: 10px;
+  width: 210px;
+}
+
+.barside-container{
+  width: 1920px;
+  justify-content: center;
+  background-color: #08BFBF;
+}
+.barside{
+  width: 1110px;
+  display: flex;
+  height: 50px;
+  margin-left: -17px;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.item1{
+  width: 215px;
+  justify-content: center;
+  border-left: 0.5px solid whitesmoke;
+  border-right: 0.5px solid whitesmoke;
+}
+.item2{
+  width: 130px;
+  justify-content: center;
+  border-left: 0.5px solid whitesmoke;
+  border-right: 0.5px solid whitesmoke;
+}
+.item3{
+  width: 155px;
+  justify-content: center;
+  border-left: 0.5px solid whitesmoke;
+  border-right: 0.5px solid whitesmoke;
+}
+.HomeAndItem{
+  width: 305px;
+  text-align: left;
+  border-left: 0.5px solid whitesmoke;
+  border-right: 0.5px solid whitesmoke;
+  background-color: #FFCD2E;
+}
+.itemChild{
+margin-top: 14px;
+margin-left: -20px;
+}
+.itemHomeChild{
+  margin-top: 14px;
+  margin-left: 30px;
+}
+.item4{
+  width: 295px;
+  display: flex;
+  justify-content: right;
+}
+
+@media screen and (max-width: 1300px) {
+.search-container{
+  display: none;
+}
+.barside-container{
+  width: 81%;
+}
+.div-header{
+  width: 95%;
+}
+.logo-container{
+  width: 100%;
+}
+.search-container{
+  width: 100%;
+  margin: 0 auto;
+}
+.longin-container{
+  width: 100%;
+  font-size: 1vw;
+  margin: 0 auto;
+}
+
+.cart-container{
+  width: 100%;
+  font-size: 1vw;
+  margin: 0 auto;
+}
+.container{
+  width: 80%;
+}
+.barside{
+  width: 92%;
+}
+.image-container{
+  width: 80%;
+
+}
+.right-column,.left-column{
+  display: none;
+}
+.HomeAndItem{
+  display: none;
+}
+.item1{
+  display: none;
+}
+.item2{
+  display: none;
+}
+.item3{
+  display: none;
+}
+.button-list{
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+  background-image: url('src/assets/image/iconButtonList.png');
+  background-size: cover;
+  background-position: center;
+  color: transparent;
+}
+.new-container{
+  display: grid;
+  width: 550px;
+}
+.list-container{
+  display: flex;
+}
+.list{
+  background-color: #08BFBF;
+  margin-top: 10px;
+  color: white;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: grid;
+}
+.search-icon{
+  width: 40px;
+  height: 40px;
+  margin-top: 5px;
+  margin-left: 15px;
+
+}
+}

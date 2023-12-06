@@ -1,0 +1,81 @@
+<div class="container">
+  <div class="left-column">
+    <h1></h1>
+  </div>
+
+  <div class="div-header">
+    <div class="logo-container">
+      <img style="margin-left: 10px;" src="assets/image/Asset_1.png" alt="Mo ta hinh anh">
+      <figcaption class="image-title">NOVO</figcaption>
+      <figcaption class="image-title2">PHARM</figcaption>
+    </div>
+    <div class="search-container">
+      <input type="text" class="search-input" placeholder="Anh/Chị đang tìm...">
+      <button alt="Icon tìm kiếm" class="search-icon"></button>
+    </div>
+
+    <div class="longin-container">
+      <img src="assets/image/login.png" alt="Icon tìm kiếm" class="login-icon">
+      <div class="link-account-container">
+        <a href="" class="link-account">Tài khoản</a>
+        <a href="" class="link-login">Đăng nhập / Đăng ký</a>
+      </div>
+    </div>
+
+    <div class="cart-container">
+      <img src="assets/image/cart.png" alt="Icon cart" class="cart-icon">
+      <div class="link-cart-container">
+        <a href="" class="link-cart">Giỏ hàng</a>
+        <a href="" class="link-totalprice">{{totalPrice}}đ</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="right-column">
+    <h1></h1>
+  </div>
+</div>
+
+<div class="barside-container">
+  <div id="existing-barside" class="barside">
+    <div *ngIf="isWindowWidthLessThan768" class="new-container">
+      <div  class="list-container">
+      <button class="button-list"  (click)="toggleList()"></button>
+      <button alt="Icon tìm kiếm" class="search-icon"></button>
+     </div>
+      <div class="list" *ngIf="showList" id="itemList">
+          <a>TRANNG CHỦ/SẢN PHẨM</a>
+          <a>VỀ NOVAPHARM</a>
+          <a>Y KHOA</a>
+          <a>TIN TỨC</a>
+      </div>
+    </div>
+
+    <div class="HomeAndItem">
+      <div class="itemHomeChild">
+        <a href=""> TRANG CHỦ / SẢN PHẨM </a>
+      </div>
+    </div>
+    <div class="item1">
+      <div class="itemChild">
+        <a href=""> VỀ NOVAPHARM </a>
+      </div>
+    </div>
+    <div class="item2">
+      <div class="itemChild">
+        <a href=""> Y KHOA</a>
+      </div>
+    </div>
+    <div class="item3">
+      <div class="itemChild">
+        <a href=""> TIN TỨC</a>
+      </div>
+    </div>
+    <div class="item4">
+      <img style="width: 30px; height: 30px; margin-top: 10px;" src="assets/image/phone.png" alt="Icon Điện thoại"
+        class="phone-icon">
+      <span style="color: white;margin-top: 12px" class="text-over-image">1800 2082</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+
+<div class="container">
+  <div class="title">
+    HỆ THỐNG SẢN PHẨM
+  </div>
+  <div class="detail-container">
+    <button class="button-pre" >&lt;</button>
+    <div *ngFor="let item of visibleProductSystem" class="slide-system-container">
+      <img class="product-system-picture" [src]="item">
+    </div>
+    <button class="button-next">&gt;</button>
+  </div>
+  <div *ngIf="isWindowWidthLessThan768" class="detail-new-container">
+    <button class="button-pre" (click)="prevSellingProductNew()">&lt;</button>
+    <div *ngFor="let item of visibleProductSystemNew" class="slide-system-container">
+      <img class="product-system-picture" [src]="item">
+    </div>
+    <button class="button-next" (click)="nextSellingProductNew()">&gt;</button>
+  </div>
+</div>

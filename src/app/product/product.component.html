@@ -1,0 +1,190 @@
+<div class="container">
+  <div class="left-column">
+    <h1></h1>
+  </div>
+
+  <div class="body-main-container">
+    <div *ngIf="isWindowWidthLessThan768" class="button-filter-container">
+      <button class="button-filter" (click)="toggleList()"></button>
+      <div  id="itemList" class="sidebarleft-new-container"  *ngIf="showList">
+        <div class="tools-container1">
+          <img (keyup.enter)="filterData()" src="assets/image/filter.png">
+          <p style="color: #08BFBF;"> Công dụng</p>
+          <div *ngFor="let item of itemsTools">
+            <label class="listFilter">
+              <input class="inputFilter" type="checkbox" [value]="item" (change)="onChange($event)">
+              {{ item }}
+            </label>
+          </div>
+        </div>
+        <div class="tools-container2">
+          <p style="color: #08BFBF;height: 30px;margin-bottom: 0%;"> Dạng bào chế</p>
+          <div *ngFor="let item of itemsPharmaceutical">
+            <label>
+              <input class="inputFilter" type="checkbox" [value]="item" (change)="onChange($event)">
+              {{ item }}
+            </label>
+          </div>
+        </div>
+        <div class="tools-container3">
+          <p style="color: #08BFBF;height: 30px;margin-bottom: 0%;"> Đối tượng sử dụng</p>
+          <div *ngFor="let item of itemsUserPersonal">
+            <label class="listFilter">
+              <input class="inputFilter" type="checkbox" [value]="item" (change)="onChange($event)">
+              {{ item }}
+            </label>
+          </div>
+        </div>
+
+        <div class="tools-container4">
+          <p style="color: #08BFBF;height: 30px;margin-bottom: 0%;"> Chuyên khoa</p>
+          <div *ngFor="let item of itemsSpecialist">
+            <label>
+              <input class="inputFilter" type="checkbox" [value]="item" (change)="onChange($event)">
+              {{ item }}
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sidebarleft-container">
+      <div class="tools-container1">
+        <img (keyup.enter)="filterData()" src="assets/image/filter.png">
+        <p style="color: #08BFBF;"> Công dụng</p>
+        <div *ngFor="let item of itemsTools">
+          <label class="listFilter">
+            <input class="inputFilter" type="checkbox" [value]="item" (change)="onChange($event)">
+            {{ item }}
+          </label>
+        </div>
+      </div>
+      <div class="tools-container2">
+        <p style="color: #08BFBF;height: 30px;margin-bottom: 0%;"> Dạng bào chế</p>
+        <div *ngFor="let item of itemsPharmaceutical">
+          <label>
+            <input class="inputFilter" type="checkbox" [value]="item" (change)="onChange($event)">
+            {{ item }}
+          </label>
+        </div>
+      </div>
+      <div class="tools-container3">
+        <p style="color: #08BFBF;height: 30px;margin-bottom: 0%;"> Đối tượng sử dụng</p>
+        <div *ngFor="let item of itemsUserPersonal">
+          <label class="listFilter">
+            <input class="inputFilter" type="checkbox" [value]="item" (change)="onChange($event)">
+            {{ item }}
+          </label>
+        </div>
+      </div>
+
+      <div class="tools-container4">
+        <p style="color: #08BFBF;height: 30px;margin-bottom: 0%;"> Chuyên khoa</p>
+        <div *ngFor="let item of itemsSpecialist">
+          <label>
+            <input class="inputFilter" type="checkbox" [value]="item" (change)="onChange($event)">
+            {{ item }}
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="listItem-container">
+      <h1 style="color: #08BFBF;margin-top: 0%;margin-left: 30px; margin-bottom: 0%;">SẢN PHẨM MỚI</h1>
+      <div class="new-product-container">
+        <button class="button-prev" (click)="prevNewProduct()">&lt;</button>
+        <div *ngFor="let item of visibleNewProduct" class="slide">
+          <div class="title-new">Mới</div>
+          <div class="image-product">
+            <img class="product" [src]="item.url" alt="Image">
+          </div>
+          <div class="title">{{ item.title }}</div>
+          <br/>
+          <div class="title-price">{{ item.price }}</div>
+          <br/>
+          <button class="addCart">CHỌN MUA</button>
+        </div>
+        <button class="button-next" (click)="nextNewProduct()">&gt;</button>
+      </div>
+      <div *ngIf="isWindowWidthLessThan768" class="new-product-new-container">
+        <button class="button-prev" (click)="prevNewProductReponsive()">&lt;</button>
+        <div *ngFor="let item of visibleNewProductResponsive" class="slide">
+          <div class="title-new">Mới</div>
+          <div class="image-product">
+            <img class="product" [src]="item.url" alt="Image">
+          </div>
+          <div class="title">{{ item.title }}</div>
+          <br/>
+          <div class="title-price">{{ item.price }}</div>
+          <br/>
+          <button class="addCart">CHỌN MUA</button>
+        </div>
+        <button class="button-next" (click)="nextNewProductReponsive()">&gt;</button>
+      </div>
+      <h1 style="color: #08BFBF;margin-top: 0%;margin-left: 30px; margin-bottom: 0%;">SẢN PHẨM BÁN CHẠY</h1>
+      <div class="selling-product-container">
+        <button class="button-prev" (click)="prevSellingProduct()">&lt;</button>
+        <div *ngFor="let item of visibleSellingProduct" class="slide">
+          <div class="title-new">Mới</div>
+          <div class="image-product">
+            <img class="product" [src]="item.url" alt="Image">
+          </div>
+          <div class="title">{{ item.title }}</div>
+          <br/>
+          <div class="title-price">{{ item.price }}</div>
+          <br/>
+          <button class="addCart">CHỌN MUA</button>
+        </div>
+        <button class="button-next" (click)="nextSellingProduct()">&gt;</button>
+      </div>
+      <div *ngIf="isWindowWidthLessThan768" class="selling-product-new-container">
+        <button class="button-prev" (click)="prevSellingProductResponsive()">&lt;</button>
+        <div *ngFor="let item of visibleSellingProductResponsive" class="slide">
+          <div class="title-new">Mới</div>
+          <div class="image-product">
+            <img class="product" [src]="item.url" alt="Image">
+          </div>
+          <div class="title">{{ item.title }}</div>
+          <br/>
+          <div class="title-price">{{ item.price }}</div>
+          <br/>
+          <button class="addCart">CHỌN MUA</button>
+        </div>
+        <button class="button-next" (click)="nextSellingProductResponsive()">&gt;</button>
+      </div>
+      <h1 style="color: #08BFBF;margin-top: 0%;margin-left: 30px; margin-bottom: 0%;">DANH MỤC SẢN PHẨM</h1>
+      <div class="category-product-container">
+        <button class="button-prev" (click)="prevCategoryProduct()">&lt;</button>
+        <div *ngFor="let item of visibleCategoryProduct" class="slide">
+          <div class="title-new">Mới</div>
+          <div class="image-product">
+            <img class="product" [src]="item.url" alt="Image">
+          </div>
+          <div class="title">{{ item.title }}</div>
+          <br/>
+          <div class="title-price">{{ item.price }}</div>
+          <br/>
+          <button class="addCart">CHỌN MUA</button>
+        </div>
+        <button class="button-next" (click)="nextCategoryProduct()">&gt;</button>
+      </div>
+      <div *ngIf="isWindowWidthLessThan768" class="category-product-new-container">
+        <button class="button-prev" (click)="prevCategoryProductResponsive()">&lt;</button>
+        <div *ngFor="let item of visibleCategoryProductResponsive" class="slide">
+          <div class="title-new">Mới</div>
+          <div class="image-product">
+            <img class="product" [src]="item.url" alt="Image">
+          </div>
+          <div class="title">{{ item.title }}</div>
+          <br/>
+          <div class="title-price">{{ item.price }}</div>
+          <br/>
+          <button class="addCart">CHỌN MUA</button>
+        </div>
+        <button class="button-next" (click)="nextCategoryProductResponsive()">&gt;</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="right-column">
+    <h1></h1>
+  </div>
+</div>

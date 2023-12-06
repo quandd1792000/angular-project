@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="left-column">
+    <h1></h1>
+  </div>
+  <div class="body-container">
+    <div class="slide-container">
+      <button class="button-left-image" (click)="previousImage()">&lt;</button>
+      <img class="image-slide" src="{{currentImage}}" alt="Image">
+      <button class="button-right-image" (click)="nextImage()">&gt;</button>
+    </div>
+    <a class="titleSortDetail" href="">{{currentSortDetail}}</a>
+    <div class="image-container">
+      <div class="image1-container">
+        <img  class="image" src="assets/image/picture1.png" alt="ảnh 1">
+      </div>
+      <div class="image2-container">
+        <img class="image" src="assets/image/picture2.png" alt="ảnh 2">
+      </div>
+    </div>
+  </div>
+  <div class="right-column">
+    <h1></h1>
+  </div>
+</div>

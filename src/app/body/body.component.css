@@ -1,0 +1,145 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 30px;
+
+}
+
+.left-column,
+.right-column {
+  width: 404px;
+  box-sizing: border-box;
+}
+
+.body-container {
+  width: 1110px;
+  display: flex;
+}
+
+.slide-container {
+  width: 730px;
+  height: 544px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+
+}
+
+.image-slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.image-container {
+  width: 380px;
+  height: 530px;
+  display: grid;
+  justify-items: right;
+
+}
+
+.titleSortDetail {
+  width: 30%;
+  font-size: 173%;
+  color: black;
+  position: absolute;
+  margin-left: 30px;
+  margin-top: 380px;
+  text-decoration: none;
+  color: inherit;
+
+}
+
+.button-left-image {
+  width: 35px;
+  height: 35px;
+  font-size: 35px;
+  align-self: center;
+  position: absolute;
+  top: 50%;
+  justify-items: left;
+  background-color: rgba(128, 128, 128, 0.5);
+  border: 0px solid rgba(128, 128, 128, 1);
+  color: white;
+}
+
+.button-right-image {
+  width: 35px;
+  height: 35px;
+  font-size: 35px;
+  align-self: center;
+  position: absolute;
+  right: 1px;
+  top: 50%;
+  color: white;
+  background-color: rgba(128, 128, 128, 0.5);
+  border: 0px solid rgba(128, 128, 128, 1);
+}
+
+.image1-container {
+  width: 350px;
+  height: 257px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+
+}
+
+.image2-container {
+  width: 350px;
+  height: 257px;
+  position: relative;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media screen and (max-width: 1300px) {
+  .body-container{
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    width: 80%;
+    overflow: hidden;
+  }
+  .image-container{
+    display: flex;
+    margin-top: 10px;
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+  }
+  .container{
+    width: 81%;
+    font-size: 2vw;
+  }
+  .image1-container {
+    margin-bottom: 0 auto;
+    margin-right: 10px;
+    width: 100%;
+  }
+  .image2-container {
+    width: 100%;
+  }
+  .image{
+    width: 100%;
+  }
+  .right-column,.left-column{
+    display: none;
+  }
+  .titleSortDetail{
+    margin-top: 23%;
+  }
+  .slide-container{
+    width: 100%;
+    overflow: hidden;
+  }
+  }

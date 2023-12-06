@@ -1,0 +1,113 @@
+.container {
+  display: flex;
+  justify-content: center;
+  /* Căn giữa các cột */
+  align-content: center;
+  margin-top: 30px;
+
+}
+
+.left-column,
+.right-column {
+  width: 405px;
+  box-sizing: border-box;
+}
+.function-container{
+  width: 1110px;
+  height: 180px;
+  display: flex;
+  border: 1px solid #808080;
+  box-sizing: border-box;
+}
+.promotion-container,.loyal-customer-container,.following-order-container{
+  width: 370px;
+  align-content: center;
+  justify-items: center;
+  display: grid;
+  padding: 5px;
+
+}
+
+.linkfucntion{
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  width: 361.5px;
+  border-right: 1px solid #808080;
+  box-sizing: border-box;
+}
+
+.linkfucntion-following{
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  width: 361px;
+  box-sizing: border-box;
+}
+
+.icon-following{
+  width: 361.5px;
+  height: 58px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.text{
+  font-size: 12px;
+  color: grey;
+  margin-top: 0px;
+}
+.icon{
+  width: 361.5px;
+  height: 58px;
+  border-right: 1px solid #808080;
+  box-sizing: border-box;
+  text-align: center;
+}
+@media screen and (max-width: 1300px) {
+  .icon{
+    border: none;
+  }
+  .right-column,.left-column{
+    display: none;
+  }
+  .icon-following{
+    border: none;
+  }
+  .linkfucntion{
+    border: none;
+  }
+  .function-container{
+    border:none
+  }
+  .function-container{
+    display: none;
+    width: 80%;
+  }
+  .function-new-container{
+    width: 80%;
+    display: grid;
+    overflow: hidden;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+  }
+  .promation-linkfunction{
+    width: 100%;
+    display: flex;
+  }
+  .promotion-container{
+    width: 100%;
+  }
+  .linkfunction-container{
+    width: 100%;
+  }
+  .loyal-customer-container{
+    width: 100%;
+  }
+  .container{
+    width: 80%;
+  }
+}
